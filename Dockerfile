@@ -1,4 +1,9 @@
-FROM node:12.2
+# ✅ NEW/FIXED (Recommended for general use)
+FROM debian:stable
+# OR (Better for Node.js apps)
+FROM node:20-slim
+# OR (Better for Python apps)
+FROM python:3.11-slim
 
 ENV HOME=/home/app
 
