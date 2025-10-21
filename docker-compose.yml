@@ -7,8 +7,11 @@ services:
       NODE_ENV: development
     tty: true
     ports:
-      - '3000:3000'
+      - '3000:3000' # Ensure this matches the port your Node app listens on
     depends_on:
       - mongodb
+      
   mongodb:
-    image: mongo:3.2.5
+    # UPDATED: Use a stable, modern version of MongoDB to avoid EOL issues
+    image: mongo:latest 
+    # Optional: Add a volume here for persistent data if necessary (not required for this task)
